@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>神工祭 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/imgViewer2.js"></script>
+    <script>
+        ;(function($){
+            $(window).on("load", function(){
+                var $img = $("#1f_img").imgViewer2(
+                    {
+                        onReady: function(){
+                            this.setZoom(2);
+                            this.setZoom(1);
+                        }
+                    }
+                );
+            });
+        })(jQuery);
+        // 団体データの配列（例）
+        const organizations = [
+            {
+                name: "DJ部",
+                description: "公演団体",
+                image: "01-03.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>工業戦隊メガボルト", 
+                description: "１階",
+                image: "01-04.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>マレーシアフェア",
+                description: "公演団体",
+                image: "01-07.png",
+                floor: "1F"
+            },
+            {
+                name: "吹奏楽部<br>吹奏楽部ステージ",
+                description: "公演団体",
+                image: "01-09.png",
+                floor: "2F"
+            },
+            {
+                name: "ダンス部<br>ダンス公演",
+                description: "公演団体",
+                image: "01-10.png",
+                floor: "2F"
+            },
+            {
+                name: "有志団体<br>マツケンサンバ2",
+                description: "公演団体",
+                image: "01-11.png",
+                floor: "2F"
+            },
+            {
+                name: "有志団体<br>一人でオドループ",
+                description: "公演団体",
+                image: "01-12.png",
+                floor: "2F"
+            },
+            {
+                name: "音楽部<br>演奏",
+                description: "公演団体",
+                image: "01-13.png",
+                floor: "2F"
+            },
+            {
+                name: "ローゼンボア",
+                description: "屋外団体",
+                image: "02-01.png",
+                floor: "1F"
+            },
+            {
+                name: "定時制4年生<br>はしびろこう",
+                description: "屋外団体",
+                image: "02-02.png",
+                floor: "1F"
+            },
+            {
+                name: "PTA<br>焼きナポリタン",
+                description: "屋外団体",
+                image: "02-03.png",
+                floor: "1F"
+            },
+            {
+                name: "A31<br>回転シーソー&うどん",
+                description: "屋外団体",
+                image: "02-04.png",
+                floor: "1F"
+            },
+            {
+                name: "A32<br>じゃがバタ　わたあめ",
+                description: "屋外団体",
+                image: "02-05.png",
+                floor: "1F"
+            },
+            {
+                name: "M31<br>焼きそば",
+                description: "屋外団体",
+                image: "02-06.png",
+                floor: "1F"
+            },
+            {
+                name: "E32<br>飲食",
+                description: "屋外団体",
+                image: "02-07.png",
+                floor: "1F"
+            },
+            {
+                name: "M32<br>ポップコーン　ホットドック　フランクフルト",
+                description: "屋外団体",
+                image: "02-08.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>必食！マレーシア料理ミーゴレン",
+                description: "屋外団体",
+                image: "02-09.png",
+                floor: "1F"
+            },
+            {
+                name: "E31<br>かつやのやきとり",
+                description: "屋外団体",
+                image: "02-10.png",
+                floor: "1F"
+            },
+            {
+                name: "A31<br>回転シーソー",
+                description: "屋外団体",
+                image: "02-11.png",
+                floor: "1F"
+            },
+            {
+                name: "A32<br>芝生スライダー",
+                description: "屋外団体",
+                image: "02-12.png",
+                floor: "1F"
+            },
+            {
+                name: "A21<br>メリーゴーランド",
+                description: "屋外団体",
+                image: "02-13.png",
+                floor: "1F"
+            },
+            {
+                name: "生徒会本部<br>スタンプラリー",
+                description: "１階",
+                image: "03-01.png",
+                floor: "1F"
+            },
+            {
+                name: "PTA<br>陶芸教室作品展・ハンドメイド販売",
+                description: "１階",
+                image: "03-02.png",
+                floor: "1F"
+            },
+            {
+                name: "たたら製鉄",
+                description: "１階",
+                image: "03-03.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>メガボルトSHOP",
+                description: "１階",
+                image: "03-04.png",
+                floor: "1F"
+            },
+            {
+                name: "保健委員会<br>体力王への道～体力王に俺はなる～",
+                description: "１階",
+                image: "03-05.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>VR/AI体験",
+                description: "２階",
+                image: "04-01.png",
+                floor: "2F"
+            },
+            {
+                name: "ものづくり研究部<br>作品展示・販売＆コマ体験",
+                description: "３階",
+                image: "05-01.png",
+                floor: "3F"
+            },
+            {
+                name: "水球部<br>水球部招待試合",
+                description: "３階",
+                image: "05-02.png",
+                floor: "3F"
+            },
+            {
+                name: "ロボティクス部<br>レゴを用いたロボット製作体験",
+                description: "３階",
+                image: "05-03.png",
+                floor: "3F"
+            },
+            {
+                name: "図書委員会<br>和綴じ本販売と古本市",
+                description: "３階",
+                image: "05-04.png",
+                floor: "3F"
+            },
+            {
+                name: "M22<br>喫茶店＆フォトスポット",
+                description: "４階",
+                image: "06-01.png",
+                floor: "4F"
+            },
+            {
+                name: "M21<br>ゲームパーク",
+                description: "４階",
+                image: "06-02.png",
+                floor: "4F"
+            },
+            {
+                name: "M32<br>フォトスポット",
+                description: "４階",
+                image: "06-03.png",
+                floor: "4F"
+            },
+            {
+                name: "M31<br>ドライビングシュミレーター",
+                description: "４階",
+                image: "06-04.png",
+                floor: "4F"
+            },
+            {
+                name: "機械科展<br>ネームプレートと文策の販売、展示等",
+                description: "４階",
+                image: "06-05.png",
+                floor: "4F"
+            },
+            {
+                name: "定時制PTA<br>お茶を出す休憩所",
+                description: "５階",
+                image: "07-01.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制2年生<br>すごいふぉとすぽっと",
+                description: "５階",
+                image: "07-02.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制1年生<br>Trick of treat",
+                description: "５階",
+                image: "07-03.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制イラスト同好会・写真部<br>作品展示・写真作品デジタル展示",
+                description: "５階",
+                image: "07-04.png",
+                floor: "5F",
+                second: 'br><img class="images" src="images/07-05.png"'
+            },
+            {
+                name: "定時制3年生<br>きゅうり",
+                description: "５階",
+                image: "07-06.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制ライフル射撃部<br>ビームライフル射撃体験",
+                description: "５階",
+                image: "07-07.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制建築研究部<br>「小田原城」～新聞紙で作成～",
+                description: "５階",
+                image: "07-08.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制機械科・建設科・電気科展<br>工業科展",
+                description: "５階",
+                image: "07-09.png",
+                floor: "5F"
+            },
+            {
+                name: "料理部<br>にぎりん喫茶",
+                description: "６階",
+                image: "08-01.png",
+                floor: "6F"
+            },
+            {
+                name: "E13<br>映画上映　飲食販売",
+                description: "６階",
+                image: "08-02.png",
+                floor: "6F"
+            },
+            {
+                name: "E12<br>昔のゲーム",
+                description: "６階",
+                image: "08-03.png",
+                floor: "6F"
+            },
+            {
+                name: "E11<br>縁日",
+                description: "６階",
+                image: "08-04.png",
+                floor: "6F"
+            },
+            {
+                name: "二渓会<br>大木理人アート展",
+                description: "６階",
+                image: "08-05.png",
+                floor: "6F"
+            },
+            {
+                name: "生徒会本部<br>Kスポーツ大会",
+                description: "６階",
+                image: "08-06.png",
+                floor: "6F"
+            },
+            {
+                name: "陶芸部・定時制陶芸部<br>作品展示",
+                description: "６階",
+                image: "08-07.png",
+                floor: "6F",
+                second: 'br><img class="images" src="images/08-08.png"'
+            },
+            {
+                name: "A22<br>ジェットコースター",
+                description: "７階",
+                image: "09-01.png",
+                floor: "7F"
+            },
+            {
+                name: "M12<br>射的",
+                description: "７階",
+                image: "09-02.png",
+                floor: "7F"
+            },
+            {
+                name: "A12<br>迷路体験",
+                description: "７階",
+                image: "09-03.png",
+                floor: "7F"
+            },
+            {
+                name: "A11<br>HIRANO STORY MANIA",
+                description: "７階",
+                image: "09-04.png",
+                floor: "7F"
+            },
+            {
+                name: "建設科展",
+                description: "７階",
+                image: "09-05.png",
+                floor: "7F"
+            },
+            {
+                name: "D2<br>Pontis Liber",
+                description: "８階",
+                image: "10-01.png",
+                floor: "8F"
+            },
+            {
+                name: "D3<br>デカDeカフェ",
+                description: "８階",
+                image: "10-02.png",
+                floor: "8F"
+            },
+            {
+                name: "イラスト・漫画同好会<br>部誌配布・グッズ販売",
+                description: "８階",
+                image: "10-03.png",
+                floor: "8F"
+            },
+            {
+                name: "美術部<br>校内販売",
+                description: "８階",
+                image: "10-04.png",
+                floor: "8F"
+            },
+            {
+                name: "デザイン科展・デザイン科カフェ",
+                description: "８階",
+                image: "10-05.png",
+                floor: "8F"
+            },
+            {
+                name: "茶道部<br>お点前の披露",
+                description: "８階",
+                image: "10-06.png",
+                floor: "8F"
+            },
+            {
+                name: "材料研究<br>清水一冴プロダクション",
+                description: "８階",
+                image: "10-07.png",
+                floor: "8F"
+            },
+            {
+                name: "E23<br>VS2-3",
+                description: "９階",
+                image: "11-01.png",
+                floor: "9F"
+            },
+            {
+                name: "E22<br>倶楽部",
+                description: "９階",
+                image: "11-02.png",
+                floor: "9F"
+            },
+            {
+                name: "E21<br>ラジコンレース",
+                description: "９階",
+                image: "11-03.png",
+                floor: "9F"
+            },
+            {
+                name: "D1<br>ワークショップ",
+                description: "９階",
+                image: "11-04.png",
+                floor: "9F"
+            },
+            {
+                name: "写真部<br>写真展",
+                description: "９階",
+                image: "11-05.png",
+                floor: "9F"
+            },
+            {
+                name: "鉄道研究部",
+                description: "９階",
+                image: "11-06.png",
+                floor: "9F"
+            },
+            {
+                name: "電気科展",
+                description: "９階",
+                image: "11-07.png",
+                floor: "9F"
+            },
+            {
+                name: "クリエイション部",
+                description: "９階",
+                image: "11-08.png",
+                floor: "9F"
+            },
+            {
+                name: "E31<br>総合ゲームセンター",
+                description: "９階",
+                image: "11-09.png",
+                floor: "9F"
+            },
+            {
+                name: "電気研究同好会<br>電気工事、電子機械の展示",
+                description: "９階",
+                image: "11-10.png",
+                floor: "9F"
+            },
+            {
+                name: "放送部<br>ステージ展示、Live放送",
+                description: "９階",
+                image: "11-11.png",
+                floor: "9F"
+            },
+            {
+                name: "ワンダーフォーゲル部",
+                description: "１０階",
+                image: "12-01.png",
+                floor: "10F"
+            },
+            {
+                name: "E32<br>謎解き",
+                description: "１０階",
+                image: "12-02.png",
+                floor: "10F"
+            },
+            {
+                name: "M11<br>キッキングスナイパー",
+                description: "１０階",
+                image: "12-03.png",
+                floor: "10F"
+            },
+            {
+                name: "神奈川総合高校<br>神奈川総合高校紹介",
+                description: "１０階",
+                image: "12-04.png",
+                floor: "10F"
+            },
+            {
+                name: "eスポーツ部<br>格ゲー体験会",
+                description: "１０階",
+                image: "12-05.png",
+                floor: "10F"
+            },
+            {
+                name: "アマチュア無線部<br>無線機やドローン等の展示・交信体験",
+                description: "１０階",
+                image: "12-06.png",
+                floor: "10F"
+            },
+            {
+                name: "神奈川総合高校 30H<br>COWBOY'S HAUNTS",
+                description: "１０階",
+                image: "12-07.png",
+                floor: "10F"
+            }
+        ];
+    
+        function search() {
+            const keyword = document.getElementById("search-box").value.toLowerCase();
+            
+            const results = organizations.filter(org => 
+                org.name.toLowerCase().includes(keyword) || org.description.toLowerCase().includes(keyword)
+            );
+    
+            const resultsContainer = document.getElementById("search-results");
+            resultsContainer.innerHTML = "";
+    
+            if (results.length === 0) {
+                resultsContainer.innerHTML = "<p>該当する団体が見つかりませんでした。</p>";
+            } else {
+                results.forEach(org => {
+                    resultsContainer.innerHTML += `
+                        <div class="result-item">
+                            <h2>${org.description}</h2>
+                            <a href="maps.html?floor=${org.floor}">${org.name}
+                            <br><img class="images" src="images/${org.image}"><${org.second}></a>
+                        </div>
+                    `;
+                });
+            }
+        }
+    </script>
+</head>
+<body class="fl">
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+    <header>
+        <h2>神奈川工業高校 神工祭 2024</h2>
+    </header>
+    <main>
+        <div class="tablike">
+            <div id="room"><a href="maps.html">フロアマップ</a></div>
+            <div id="floor">リーフレット</div>
+        </div>
+        <div class="sfloor">
+            <p style="text-align: left; margin-left: 40px;" >目次</p>
+            <div style="text-align: left; margin-left: 50px; text-decoration: underline;">
+                <a href="#kouen">▽公演団体<br></a>
+                <a href="#okugai">▽屋外団体<br></a>
+                <a href="#1F">▽１階<br></a>
+                <a href="#2F">▽２階<br></a>
+                <a href="#3F">▽３階<br></a>
+                <a href="#4F">▽４階<br></a>
+                <a href="#5F">▽５階<br></a>
+                <a href="#6F">▽６階<br></a>
+                <a href="#7F">▽７階<br></a>
+                <a href="#8F">▽８階<br></a>
+                <a href="#9F">▽９階<br></a>
+                <a href="#10F">▽１０階</a>
+            </div>
+        </div>
+        <div id="search-container">
+            <input type="text" id="search-box" placeholder="団体名で検索（例：M11）">
+            <button class="button" onclick="search()">検索</button>
+        </div>
+        <p>画像をクリックすると<br>その団体のある階のフロアマップにジャンプします。</p>
+        <div class="text">
+            <div id="search-results"></div>
+            <div id="kouen">
+                <h2>公演団体</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=1F">DJ部
+                    <br><img class="images" src="images/01-03.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E33<br>工業戦隊メガボルト
+                    <br><img class="images" src="images/01-04.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E33<br>マレーシアフェア
+                    <br><img class="images" src="images/01-07.png"></a><br><br>
+                    <a href="maps.html?floor=2F">吹奏楽部<br>吹奏楽部ステージ
+                    <br><img class="images" src="images/01-09.png"></a><br><br>
+                    <a href="maps.html?floor=2F">ダンス部<br>ダンス公演
+                    <br><img class="images" src="images/01-10.png"></a><br><br>
+                    <a href="maps.html?floor=2F">有志団体<br>マツケンサンバ2
+                    <br><img class="images" src="images/01-11.png"></a><br><br>
+                    <a href="maps.html?floor=2F">有志団体<br>一人でオドループ
+                    <br><img class="images" src="images/01-12.png"></a><br><br>
+                    <a href="maps.html?floor=2F">音楽部<br>演奏
+                    <br><img class="images" src="images/01-13.png"></a><br><br>
+                </p>
+            </div>
+            <div id="okugai">
+                <h2>屋外団体</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=1F">ローゼンボア
+                    <br><img class="images" src="images/02-01.png"></a><br><br>
+                    <a href="maps.html?floor=1F">定時制4年生<br>はしびろこう
+                    <br><img class="images" src="images/02-02.png"></a><br><br>
+                    <a href="maps.html?floor=1F">PTA<br>焼きナポリタン
+                    <br><img class="images" src="images/02-03.png"></a><br><br>
+                    <a href="maps.html?floor=1F">A31<br>回転シーソー&うどん
+                    <br><img class="images" src="images/02-04.png"></a><br><br>
+                    <a href="maps.html?floor=1F">A32<br>じゃがバタ　わたあめ
+                    <br><img class="images" src="images/02-05.png"></a><br><br>
+                    <a href="maps.html?floor=1F">M31<br>焼きそば
+                    <br><img class="images" src="images/02-06.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E32<br>飲食
+                    <br><img class="images" src="images/02-07.png"></a><br><br>
+                    <a href="maps.html?floor=1F">M32<br>ポップコーン　ホットドック　フランクフルト
+                    <br><img class="images" src="images/02-08.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E33<br>必食！マレーシア料理ミーゴレン
+                    <br><img class="images" src="images/02-09.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E31<br>かつやのやきとり
+                    <br><img class="images" src="images/02-10.png"></a><br><br>
+                    <a href="maps.html?floor=1F">A31<br>回転シーソー
+                    <br><img class="images" src="images/02-11.png"></a><br><br>
+                    <a href="maps.html?floor=1F">A32<br>芝生スライダー
+                    <br><img class="images" src="images/02-12.png"></a><br><br>
+                    <a href="maps.html?floor=1F">A21<br>メリーゴーランド
+                    <br><img class="images" src="images/02-13.png"></a><br><br>
+                </p>
+            </div>
+            <div id="1F">
+                <h2>１階</h2>
+                <p class="imagep">
+                    野外ステージは<a href="#kouen" style="text-decoration: underline;">△公演団体</a>へ<br><br>
+                    <a href="maps.html?floor=1F">生徒会本部<br>スタンプラリー
+                    <br><img class="images" src="images/03-01.png"></a><br><br>
+                    <a href="maps.html?floor=1F">PTA<br>陶芸教室作品展・ハンドメイド販売
+                    <br><img class="images" src="images/03-02.png"></a><br><br>
+                    <a href="maps.html?floor=1F">たたら製鉄
+                    <br><img class="images" src="images/03-03.png"></a><br><br>
+                    <a href="maps.html?floor=1F">E33<br>メガボルトSHOP
+                    <br><img class="images" src="images/03-04.png"></a><br><br>
+                    <a href="maps.html?floor=1F">保健委員会<br>体力王への道～体力王に俺はなる～
+                    <br><img class="images" src="images/03-05.png"></a><br><br>
+                </p>
+            </div>
+            <div id="2F">
+                <h2>２階</h2>
+                <p class="imagep">
+                    体育館は<a href="#kouen" style="text-decoration: underline;">△公演団体</a>へ<br><br>
+                    <a href="maps.html?floor=2F">E33<br>VR/AI体験
+                    <br><img class="images" src="images/04-01.png"></a><br><br>
+                </p>
+            </div>
+            <div id="3F">
+                <h2>３階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=3F">ものづくり研究部<br>作品展示・販売＆コマ体験
+                    <br><img class="images" src="images/05-01.png"></a><br><br>
+                    <a href="maps.html?floor=3F">水球部<br>水球部招待試合
+                    <br><img class="images" src="images/05-02.png"></a><br><br>
+                    <a href="maps.html?floor=3F">ロボティクス部<br>レゴを用いたロボット製作体験
+                    <br><img class="images" src="images/05-03.png"></a><br><br>
+                    <a href="maps.html?floor=3F">図書委員会<br>和綴じ本販売と古本市
+                    <br><img class="images" src="images/05-04.png"></a><br><br>
+                </p>
+            </div>
+            <div id="4F">
+                <h2>４階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=4F">M22<br>喫茶店＆フォトスポット
+                    <br><img class="images" src="images/06-01.png"></a><br><br>
+                    <a href="maps.html?floor=4F">M21<br>ゲームパーク
+                    <br><img class="images" src="images/06-02.png"></a><br><br>
+                    <a href="maps.html?floor=4F">M32<br>フォトスポット
+                    <br><img class="images" src="images/06-03.png"></a><br><br>
+                    <a href="maps.html?floor=4F">M31<br>ドライビングシュミレーター
+                    <br><img class="images" src="images/06-04.png"></a><br><br>
+                    <a href="maps.html?floor=4F">機械科展<br>ネームプレートと文策の販売、展示等
+                    <br><img class="images" src="images/06-05.png"></a><br><br>
+                </p>
+            </div>
+            <div id="5F">
+                <h2>５階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=5F">定時制PTA<br>お茶を出す休憩所
+                    <br><img class="images" src="images/07-01.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制2年生<br>すごいふぉとすぽっと
+                    <br><img class="images" src="images/07-02.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制1年生<br>Trick of treat
+                    <br><img class="images" src="images/07-03.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制イラスト同好会・写真部<br>作品展示・写真作品デジタル展示
+                    <br><img class="images" src="images/07-04.png">
+                    <br><img class="images" src="images/07-05.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制3年生<br>きゅうり
+                    <br><img class="images" src="images/07-06.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制ライフル射撃部<br>ビームライフル射撃体験
+                    <br><img class="images" src="images/07-07.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制建築研究部<br>「小田原城」～新聞紙で作成～
+                    <br><img class="images" src="images/07-08.png"></a><br><br>
+                    <a href="maps.html?floor=5F">定時制機械科・建設科・電気科展<br>工業科展
+                    <br><img class="images" src="images/07-09.png"></a><br><br>
+                </p>
+            </div>
+            <div id="6F">
+                <h2>６階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=6F">料理部<br>にぎりん喫茶
+                    <br><img class="images" src="images/08-01.png"></a><br><br>
+                    <a href="maps.html?floor=6F">E13<br>映画上映　飲食販売
+                    <br><img class="images" src="images/08-02.png"></a><br><br>
+                    <a href="maps.html?floor=6F">E12<br>昔のゲーム
+                    <br><img class="images" src="images/08-03.png"></a><br><br>
+                    <a href="maps.html?floor=6F">E11<br>縁日
+                    <br><img class="images" src="images/08-04.png"></a><br><br>
+                    <a href="maps.html?floor=6F">二渓会<br>大木理人アート展
+                    <br><img class="images" src="images/08-05.png"></a><br><br>
+                    <a href="maps.html?floor=6F">生徒会本部<br>Kスポーツ大会
+                    <br><img class="images" src="images/08-06.png"></a><br><br>
+                    <a href="maps.html?floor=6F">陶芸部・定時制陶芸部<br>作品展示
+                    <br><img class="images" src="images/08-07.png">
+                    <br><img class="images" src="images/08-08.png"></a><br><br>
+                </p>
+            </div>
+            <div id="7F">
+                <h2>７階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=7F">A22<br>ジェットコースター
+                    <br><img class="images" src="images/09-01.png"></a><br><br>
+                    <a href="maps.html?floor=7F">M12<br>射的
+                    <br><img class="images" src="images/09-02.png"></a><br><br>
+                    <a href="maps.html?floor=7F">A12<br>迷路体験
+                    <br><img class="images" src="images/09-03.png"></a><br><br>
+                    <a href="maps.html?floor=7F">A11<br>HIRANO STORY MANIA
+                    <br><img class="images" src="images/09-04.png"></a><br><br>
+                    <a href="maps.html?floor=7F">建設科展
+                    <br><img class="images" src="images/09-05.png"></a><br><br>
+                </p>
+            </div>
+            <div id="8F">
+                <h2>８階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=8F">D2<br>Pontis Liber
+                    <br><img class="images" src="images/10-01.png"></a><br><br>
+                    <a href="maps.html?floor=8F">D3<br>デカDeカフェ
+                    <br><img class="images" src="images/10-02.png"></a><br><br>
+                    <a href="maps.html?floor=8F">イラスト・漫画同好会<br>部誌配布・グッズ販売
+                    <br><img class="images" src="images/10-03.png"></a><br><br>
+                    <a href="maps.html?floor=8F">美術部<br>校内販売
+                    <br><img class="images" src="images/10-04.png"></a><br><br>
+                    <a href="maps.html?floor=8F">デザイン科展・デザイン科カフェ
+                    <br><img class="images" src="images/10-05.png"></a><br><br>
+                    <a href="maps.html?floor=8F">茶道部<br>お点前の披露
+                    <br><img class="images" src="images/10-06.png"></a><br><br>
+                    <a href="maps.html?floor=8F">材料研究<br>清水一冴プロダクション
+                    <br><img class="images" src="images/10-07.png"></a><br><br>
+                </p>
+            </div>
+            <div id="9F">
+                <h2>９階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=9F">E23<br>VS2-3
+                    <br><img class="images" src="images/11-01.png"></a><br><br>
+                    <a href="maps.html?floor=9F">E22<br>倶楽部
+                    <br><img class="images" src="images/11-02.png"></a><br><br>
+                    <a href="maps.html?floor=9F">E21<br>ラジコンレース
+                    <br><img class="images" src="images/11-03.png"></a><br><br>
+                    <a href="maps.html?floor=9F">D1<br>ワークショップ
+                    <br><img class="images" src="images/11-04.png"></a><br><br>
+                    <a href="maps.html?floor=9F">写真部<br>写真展
+                    <br><img class="images" src="images/11-05.png"></a><br><br>
+                    <a href="maps.html?floor=9F">鉄道研究部
+                    <br><img class="images" src="images/11-06.png"></a><br><br>
+                    <a href="maps.html?floor=9F">電気科展
+                    <br><img class="images" src="images/11-07.png"></a><br><br>
+                    <a href="maps.html?floor=9F">クリエイション部
+                    <br><img class="images" src="images/11-08.png"></a><br><br>
+                    <a href="maps.html?floor=9F">E31<br>総合ゲームセンター
+                    <br><img class="images" src="images/11-09.png"></a><br><br>
+                    <a href="maps.html?floor=9F">電気研究同好会<br>電気工事、電子機械の展示
+                    <br><img class="images" src="images/11-10.png"></a><br><br>
+                    <a href="maps.html?floor=9F">放送部<br>ステージ展示、Live放送
+                    <br><img class="images" src="images/11-11.png"></a><br><br>
+                </p>
+            </div>
+            <div id="10F">
+                <h2>１０階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=10F">ワンダーフォーゲル部
+                    <br><img class="images" src="images/12-01.png"></a><br><br>
+                    <a href="maps.html?floor=10F">E32<br>謎解き
+                    <br><img class="images" src="images/12-02.png"></a><br><br>
+                    <a href="maps.html?floor=10F">M11<br>キッキングスナイパー
+                    <br><img class="images" src="images/12-03.png"></a><br><br>
+                    <a href="maps.html?floor=10F">神奈川総合高校<br>神奈川総合高校紹介
+                    <br><img class="images" src="images/12-04.png"></a><br><br>
+                    <a href="maps.html?floor=10F">eスポーツ部<br>格ゲー体験会
+                    <br><img class="images" src="images/12-05.png"></a><br><br>
+                    <a href="maps.html?floor=10F">アマチュア無線部<br>無線機やドローン等の展示・交信体験
+                    <br><img class="images" src="images/12-06.png"></a><br><br>
+                    <a href="maps.html?floor=10F">神奈川総合高校 30H<br>COWBOY'S HAUNTS
+                    <br><img class="images" src="images/12-07.png"></a><br><br>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>学校関係者以外へのリンクシェア禁止<br>
+        <small>&copy; 2024 神工校内マップ 108期生製作 v2.0</small></p>
+    </footer>
+</body>
+</html>
