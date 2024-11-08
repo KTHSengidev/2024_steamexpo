@@ -41,7 +41,7 @@ header h2 {
 
 .images{
   width: 100%;
-  max-width: 800px;
+  max-width: 200px;
 }
 
 html {
@@ -219,9 +219,7 @@ input[type="reset"]{
   text-decoration: none;
   display: block;
 }
-/*a:visited{
-  color: inherit;
-}*/
+
 a:hover{
   opacity: 0.6;
 }
