@@ -12,6 +12,198 @@
             text-decoration: none;
         }
     </style>
+</head>
+<body class="fl">
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+    <header>
+        <h2>横浜 STEAM EXPO 2024</h2>
+    </header>
+    <!--<div id="navigation-bar" class="for-sp">
+        <ul>
+            <li id="bar"><a href="index.html">ホーム</a></li>
+            <li id="bar"><a href="map.html">地図</a></li>
+            <li id="bar"><a href="diagnosis.html">診断</a></li>
+            <li id="bar"><a href="https://sanfair.info/">産業教育フェア HP</a></li>
+            <li id="bar"><a href="https://www.steamexpo.jp">横浜STEAM EXPO HP</a></li>
+        </ul>
+    </div>-->
+    <main>
+        <div class="tablike">
+            <div id="room"><a href="maps.html">フロアマップ</a></div>
+            <div id="floor">索引</div>
+        </div>
+        <div class="sfloor">
+            <p style="text-align: left; margin-left: 40px;" >目次</p>
+            <div style="text-align: left; margin-left: 50px; text-decoration: underline;">
+                <a href="#1F">▽１階・屋外<br></a>
+                <a href="#2F">▽２階・体育館<br></a>
+                <a href="#3F">▽３階<br></a>
+                <a href="#4F">▽４階<br></a>
+                <a href="#5F">▽５階<br></a>
+                <a href="#6F">▽６階<br></a>
+                <a href="#7F">▽７階<br></a>
+                <a href="#8F">▽８階<br></a>
+                <a href="#9F">▽９階<br></a>
+                <a href="#10F">▽１０階</a>
+            </div>
+        </div>
+        <div id="search-container">
+            <input type="text" id="search-box" placeholder="キーワード検索">
+            <button class="button" onclick="search()">検索</button>
+        </div>
+        <p>画像をクリックすると<br>その団体のある階のフロアマップにジャンプします。</p>
+        <div class="text">
+            <div id="search-results"></div>
+            <div id="1F">
+                <h2>１階・屋外</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=1F">県立高等学校PTA連合会専門教育部門大会
+                    </a><br><br>
+                    <a href="maps.html?floor=1F">小田原東高校<br>　総合ビジネス科<br>　　小田原を飲んで味わおう！！
+                    <br><img class="images" src="sakuin/odawarahigashi.png"></a><br><br>
+                    <a href="maps.html?floor=1F">平塚工科高校<br>　総合技術科<br>　　「エコランカー」ってなに？<br>　　神奈川県でココだけの自動車の整備体験！！<br>　　安くてうまい！ホットドッグ！
+                    <br><img class="images" src="sakuin/hiratsukakoka-th.png"></a><br><br>
+                    <a href="maps.html?floor=1F">藤沢工科高校<br>　総合技術科<br>　　藤工モノづくり即売会<br>　　６つ星テントウムシの森
+                    <br><img class="images" src="sakuin/fujisawakoka-th.png"></a><br><br>
+                    <a href="maps.html?floor=1F">海洋科学高校<br>　無線技術科<br>　　空中ドローン飛行展示・水中ドローン操縦体験<br>　水産食品科<br>
+                    <br><img class="images" src="sakuin/kaiyokagaku-h.png"></a><br><br>
+                    <a href="maps.html?floor=1F">神奈川工業高校<br>　建設科<br>　　アーチ
+                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
+                </p>
+            </div>
+            <div id="2F">
+                <h2>２階・体育館</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=2F">特定失踪者等パネル展示
+                    </a><br><br>
+                    <a href="maps.html?floor=2F">小学生モノづくりカレッジ
+                    <br><img class="images" src="sakuin/shokare_rogo.png"></a><br><br>
+                    <a href="maps.html?floor=2F">中学生ロボテックチャレンジ
+                    <br><img class="images" src="sakuin/churobo.png"></a><br><br>
+                    <a href="maps.html?floor=2F">二俣川看護福祉高校<br>　福祉科<br>　　手話歌＆研究発表
+                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
+                    <a href="maps.html?floor=2F">相原高校<br>　畜産科学科<br>　　模擬農業クラブ大会！意見・プロジェクト発表！
+                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
+                    <a href="maps.html?floor=2F">横須賀工業高校<br>　　ステージ
+                    <br><img class="images" src="sakuin/yokosuka-th.png"></a><br><br>
+                    <a href="maps.html?floor=2F">神奈川工業高校<br>　　ステージ
+                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
+                    <a href="maps.html?floor=2F">神奈川総合産業高校<br>　　ステージ
+                    <br><img class="images" src="sakuin/kanagawasogosangyo-h.png"></a><br><br>
+                </p>
+            </div>
+            <div id="3F">
+                <h2>３階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=3F">事務局本部
+                    </a><br><br>
+                    <a href="maps.html?floor=3F">救護室
+                        <br><img class="images" src="sakuin/kyugo.png"></a><br><br>
+                </p>
+            </div>
+            <div id="4F">
+                <h2>４階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=4F">神奈川県内専門高校PR展
+                    </a><br><br>
+                </p>
+            </div>
+            <div id="5F">
+                <h2>５階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=5F">中学生ロボテックチャレンジ休憩室
+                    </a><br><br>
+                    <a href="maps.html?floor=5F">横浜STEAM EXPO 関係者休憩室
+                    </a><br><br>
+                    <a href="maps.html?floor=5F">MF-TOKYOブース
+                    <br><img class="images" src="sakuin/MF-TOKYO.png"></a><br><br>
+                </p>
+            </div>
+            <div id="6F">
+                <h2>６階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=6F">二俣川看護福祉高校<br>　福祉科<br>　　ボッチャをやってみよう！
+                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
+                    <a href="maps.html?floor=6F">横須賀南高校<br>　福祉科<br>　　高齢者体験とハッピーフォトアート
+                    <br><img class="images" src="sakuin/yokosukaminami.png"></a><br><br>
+                    <a href="maps.html?floor=6F">川崎市立川崎高校<br>　福祉科<br>　　福祉科紹介
+                    <br><img class="images" src="sakuin/kawasaki-w.png"></a><br><br>
+                    <a href="maps.html?floor=6F">津久井高校<br>　福祉科<br>　　筋力テスト〜健康寿命を伸ばそう！〜
+                    <br><img class="images" src="sakuin/tsukui.png"></a><br><br>
+                    <a href="maps.html?floor=6F">吉田島高校<br>　生活科学科<br>　　こどものおててはどんな感じ？
+                    <br><img class="images" src="sakuin/yoshidajima-h.png"></a><br><br>
+                    <a href="maps.html?floor=6F">神奈川総合産業高校<br>　総合産業科<br>　　学校紹介<br>　　こどものおててはどんな感じ？
+                    <br><img class="images" src="sakuin/kanagawasogosangyo-h.png"></a><br><br>
+                </p>
+            </div>
+            <div id="7F">
+                <h2>７階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=7F">平塚農商高校<br>　商業科<br>　　セレクト商品販売
+                    <br><img class="images" src="sakuin/hiratsukanousyou-h.png"></a><br><br>
+                    <a href="maps.html?floor=7F">横浜商業高校<br>　商業科<br>　　ハマっ子あげぱん
+                    <br><img class="images" src="sakuin/y-shogyo.png"></a><br><br>
+                    <a href="maps.html?floor=7F">厚木王子高校<br>　総合ビジネス科<br>　　厚とんカレー<br>　　ガチャ王
+                    <br><img class="images" src="sakuin/atsugi-ch.png"></a><br><br>
+                    <a href="maps.html?floor=7F">商工高校<br>　総合技術科<br>　　プラリウム<br>　　トラッシュゼロ
+                    <br><img class="images" src="sakuin/syoko-t.png"></a><br><br>
+                    <a href="maps.html?floor=7F">相原高校<br>　総合ビジネス科<br>　　相原と企業のつながり
+                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
+                    <a href="maps.html?floor=7F">幸高校<br>　ビジネス教養科<br>　　煎餅の販売
+                    <br><img class="images" src="sakuin/kchkousho.png"></a><br><br>
+                </p>
+            </div>
+            <div id="8F">
+                <h2>８階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=8F">神奈川工業高校<br>　電気科<br>　　神奈工房
+                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
+                    <a href="maps.html?floor=8F">海洋科学高校<br>　生物環境科<br>　　実習内容展示・製品販売<br>　船舶運航科<br>　　船舶運航科のことを知ろう！
+                    <br><img class="images" src="sakuin/kaiyokagaku-h.png"></a><br><br>
+                </p>
+            </div>
+            <div id="9F">
+                <h2>９階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=9F">相原高校<br>　畜産科学科<br>　　相原高校の魅力をギュギュッと！<br>　　農業わくわく体験‼<br>　　相原SHOP<br>　食品科学科<br>　　相原SHOP
+                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
+                    <a href="maps.html?floor=9F">平塚農商高校<br>　農業総合科<br>　　多肉植物の寄せ植え講座<br>　　生産物の販売<br>　　農業科4科の学校紹介
+                    <br><img class="images" src="sakuin/hiratsukanousyou-h.png"></a><br><br>
+                    <a href="maps.html?floor=9F">中央農業高校<br>　園芸科学科・畜産科学科・農業総合科<br>　　農業高校の生産物販売<br>　　（３科）の紹介ビデオを見て特産品をGetしよう<br>　　木材加工や植物の寄せ植え
+                    <br><img class="images" src="sakuin/chuo-ah.png"></a><br><br>
+                    <a href="maps.html?floor=9F">吉田島高校<br>　農業科<br>　　ヨシダジマーケット<br>　　100％天然素材のペン立て
+                    <br><img class="images" src="sakuin/yoshidajima-h.png"></a><br><br>
+                    <a href="maps.html?floor=9F">三浦初声高校<br>　都市農業科<br>　　寄せ植え体験<br>　　生産物販売<br>　　学校の紹介や三浦の農業に関する展示
+                    <br><img class="images" src="sakuin/miurahasse.png"></a><br><br>
+                    <a href="maps.html?floor=9F">二俣川看護福祉高校<br>　看護科<br>　　血圧を測ってみよう。赤ちゃんを抱っこしてみよう。
+                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
+                </p>
+            </div>
+            <div id="10F">
+                <h2>１０階</h2>
+                <p class="imagep">
+                    <a href="maps.html?floor=10F">磯子工業高校<br>　機械科<br>　　磯GOガチャ_機械科<br>　電気科<br>　　磯GOガチャ_電気科<br>　建設科<br>　　磯GOガチャ_建設科<br>　化学科<br>　　磯GOガチャ_化学科<br>　4科合同<br>　　キーフックボードの制作体験
+                    <br><img class="images" src="sakuin/isogo-th_2.png"></a><br><br>
+                    <a href="maps.html?floor=10F">向の岡工業高校<br>　機械科・電気科・建設科<br>　　ドキドキわくわくプログラム体験
+                    <br><img class="images" src="sakuin/mukainooka-th.png"></a><br><br>
+                    <a href="maps.html?floor=10F">川崎工科高校<br>　総合技術科<br>　　勇魚装飾店
+                    <br><img class="images" src="sakuin/kawasakikoka-th.png"></a><br><br>
+                    <a href="maps.html?floor=10F">神奈川工業高等学校<br>　建設科<br>　　模型製作（クリスマスツリー）<br>　デザイン科<br>　　デザインファミリア
+                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
+                    <a href="maps.html?floor=10F">小田原城北工業高校<br>　機械科・建設科・電気科・デザイン科<br>　　各科展示
+                    <br><img class="images" src="sakuin/odawarajohoku-th.png"></a><br><br>
+                    <a href="maps.html?floor=10F">川崎総合科学高校<br>　情報工学科・総合電気科・電子機械科・建設工学科・デザイン科・科学科<br>　　川崎市立川崎総合科学高等学校　紹介ブース
+                    <br><img class="images" src="sakuin/kst.png"></a><br><br>
+                    <a href="maps.html?floor=10F">横須賀工業高校<br>　機械科・電気科・建設科・化学科<br>　　横須賀工業全4科から創作物持ってきてみた
+                    <br><img class="images" src="sakuin/yokosuka-th.png"></a><br><br>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><small>&copy; 2024 神工校内マップ 108期生製作 v2.1</small></p>
+        <br><br><br><br><br><br><br>
+    </footer>
     <script>
         // 団体データの配列（例）
         const organizations = [
@@ -317,198 +509,12 @@
                 });
             }
         }
+        // Enterキーで検索を実行するためのイベントリスナー
+        document.getElementById("search-box").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                search();
+            }
+        });
     </script>
-</head>
-<body class="fl">
-    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
-    <header>
-        <h2>横浜 STEAM EXPO 2024</h2>
-    </header>
-    <!--<div id="navigation-bar" class="for-sp">
-        <ul>
-            <li id="bar"><a href="index.html">ホーム</a></li>
-            <li id="bar"><a href="map.html">地図</a></li>
-            <li id="bar"><a href="diagnosis.html">診断</a></li>
-            <li id="bar"><a href="https://sanfair.info/">産業教育フェア HP</a></li>
-            <li id="bar"><a href="https://www.steamexpo.jp">横浜STEAM EXPO HP</a></li>
-        </ul>
-    </div>-->
-    <main>
-        <div class="tablike">
-            <div id="room"><a href="maps.html">フロアマップ</a></div>
-            <div id="floor">索引</div>
-        </div>
-        <div class="sfloor">
-            <p style="text-align: left; margin-left: 40px;" >目次</p>
-            <div style="text-align: left; margin-left: 50px; text-decoration: underline;">
-                <a href="#1F">▽１階・屋外<br></a>
-                <a href="#2F">▽２階・体育館<br></a>
-                <a href="#3F">▽３階<br></a>
-                <a href="#4F">▽４階<br></a>
-                <a href="#5F">▽５階<br></a>
-                <a href="#6F">▽６階<br></a>
-                <a href="#7F">▽７階<br></a>
-                <a href="#8F">▽８階<br></a>
-                <a href="#9F">▽９階<br></a>
-                <a href="#10F">▽１０階</a>
-            </div>
-        </div>
-        <div id="search-container">
-            <input type="text" id="search-box" placeholder="キーワード検索">
-            <button class="button" onclick="search()">検索</button>
-        </div>
-        <p>画像をクリックすると<br>その団体のある階のフロアマップにジャンプします。</p>
-        <div class="text">
-            <div id="search-results"></div>
-            <div id="1F">
-                <h2>１階・屋外</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=1F">県立高等学校PTA連合会専門教育部門大会
-                    </a><br><br>
-                    <a href="maps.html?floor=1F">小田原東高校<br>　総合ビジネス科<br>　　小田原を飲んで味わおう！！
-                    <br><img class="images" src="sakuin/odawarahigashi.png"></a><br><br>
-                    <a href="maps.html?floor=1F">平塚工科高校<br>　総合技術科<br>　　「エコランカー」ってなに？<br>　　神奈川県でココだけの自動車の整備体験！！<br>　　安くてうまい！ホットドッグ！
-                    <br><img class="images" src="sakuin/hiratsukakoka-th.png"></a><br><br>
-                    <a href="maps.html?floor=1F">藤沢工科高校<br>　総合技術科<br>　　藤工モノづくり即売会<br>　　６つ星テントウムシの森
-                    <br><img class="images" src="sakuin/fujisawakoka-th.png"></a><br><br>
-                    <a href="maps.html?floor=1F">海洋科学高校<br>　無線技術科<br>　　空中ドローン飛行展示・水中ドローン操縦体験<br>　水産食品科<br>
-                    <br><img class="images" src="sakuin/kaiyokagaku-h.png"></a><br><br>
-                    <a href="maps.html?floor=1F">神奈川工業高校<br>　建設科<br>　　アーチ
-                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
-                </p>
-            </div>
-            <div id="2F">
-                <h2>２階・体育館</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=2F">特定失踪者等パネル展示
-                    </a><br><br>
-                    <a href="maps.html?floor=2F">小学生モノづくりカレッジ
-                    <br><img class="images" src="sakuin/shokare_rogo.png"></a><br><br>
-                    <a href="maps.html?floor=2F">中学生ロボテックチャレンジ
-                    <br><img class="images" src="sakuin/churobo.png"></a><br><br>
-                    <a href="maps.html?floor=2F">二俣川看護福祉高校<br>　福祉科<br>　　手話歌＆研究発表
-                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
-                    <a href="maps.html?floor=2F">相原高校<br>　畜産科学科<br>　　模擬農業クラブ大会！意見・プロジェクト発表！
-                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
-                    <a href="maps.html?floor=2F">横須賀工業高校<br>　　ステージ
-                    <br><img class="images" src="sakuin/yokosuka-th.png"></a><br><br>
-                    <a href="maps.html?floor=2F">神奈川工業高校<br>　　ステージ
-                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
-                    <a href="maps.html?floor=2F">神奈川総合産業高校<br>　　ステージ
-                    <br><img class="images" src="sakuin/kanagawasogosangyo-h.png"></a><br><br>
-                </p>
-            </div>
-            <div id="3F">
-                <h2>３階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=3F">事務局本部
-                    </a><br><br>
-                    <a href="maps.html?floor=3F">救護室
-                        <br><img class="images" src="sakuin/kyugo.png"></a><br><br>
-                </p>
-            </div>
-            <div id="4F">
-                <h2>４階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=4F">神奈川県内専門高校PR展
-                    </a><br><br>
-                </p>
-            </div>
-            <div id="5F">
-                <h2>５階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=5F">中学生ロボテックチャレンジ休憩室
-                    </a><br><br>
-                    <a href="maps.html?floor=5F">横浜STEAM EXPO 関係者休憩室
-                    </a><br><br>
-                    <a href="maps.html?floor=5F">MF-TOKYOブース
-                    <br><img class="images" src="sakuin/MF-TOKYO.png"></a><br><br>
-                </p>
-            </div>
-            <div id="6F">
-                <h2>６階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=6F">二俣川看護福祉高校<br>　福祉科<br>　　ボッチャをやってみよう！
-                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
-                    <a href="maps.html?floor=6F">横須賀南高校<br>　福祉科<br>　　高齢者体験とハッピーフォトアート
-                    <br><img class="images" src="sakuin/yokosukaminami.png"></a><br><br>
-                    <a href="maps.html?floor=6F">川崎市立川崎高校<br>　福祉科<br>　　福祉科紹介
-                    <br><img class="images" src="sakuin/kawasaki-w.png"></a><br><br>
-                    <a href="maps.html?floor=6F">津久井高校<br>　福祉科<br>　　筋力テスト〜健康寿命を伸ばそう！〜
-                    <br><img class="images" src="sakuin/tsukui.png"></a><br><br>
-                    <a href="maps.html?floor=6F">吉田島高校<br>　生活科学科<br>　　こどものおててはどんな感じ？
-                    <br><img class="images" src="sakuin/yoshidajima-h.png"></a><br><br>
-                    <a href="maps.html?floor=6F">神奈川総合産業高校<br>　総合産業科<br>　　学校紹介<br>　　こどものおててはどんな感じ？
-                    <br><img class="images" src="sakuin/kanagawasogosangyo-h.png"></a><br><br>
-                </p>
-            </div>
-            <div id="7F">
-                <h2>７階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=7F">平塚農商高校<br>　商業科<br>　　セレクト商品販売
-                    <br><img class="images" src="sakuin/hiratsukanousyou-h.png"></a><br><br>
-                    <a href="maps.html?floor=7F">横浜商業高校<br>　商業科<br>　　ハマっ子あげぱん
-                    <br><img class="images" src="sakuin/y-shogyo.png"></a><br><br>
-                    <a href="maps.html?floor=7F">厚木王子高校<br>　総合ビジネス科<br>　　厚とんカレー<br>　　ガチャ王
-                    <br><img class="images" src="sakuin/atsugi-ch.png"></a><br><br>
-                    <a href="maps.html?floor=7F">商工高校<br>　総合技術科<br>　　プラリウム<br>　　トラッシュゼロ
-                    <br><img class="images" src="sakuin/syoko-t.png"></a><br><br>
-                    <a href="maps.html?floor=7F">相原高校<br>　総合ビジネス科<br>　　相原と企業のつながり
-                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
-                    <a href="maps.html?floor=7F">幸高校<br>　ビジネス教養科<br>　　煎餅の販売
-                    <br><img class="images" src="sakuin/kchkousho.png"></a><br><br>
-                </p>
-            </div>
-            <div id="8F">
-                <h2>８階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=8F">神奈川工業高校<br>　電気科<br>　　神奈工房
-                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
-                    <a href="maps.html?floor=8F">海洋科学高校<br>　生物環境科<br>　　実習内容展示・製品販売<br>　船舶運航科<br>　　船舶運航科のことを知ろう！
-                    <br><img class="images" src="sakuin/kaiyokagaku-h.png"></a><br><br>
-                </p>
-            </div>
-            <div id="9F">
-                <h2>９階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=9F">相原高校<br>　畜産科学科<br>　　相原高校の魅力をギュギュッと！<br>　　農業わくわく体験‼<br>　　相原SHOP<br>　食品科学科<br>　　相原SHOP
-                    <br><img class="images" src="sakuin/aihara-c.png"></a><br><br>
-                    <a href="maps.html?floor=9F">平塚農商高校<br>　農業総合科<br>　　多肉植物の寄せ植え講座<br>　　生産物の販売<br>　　農業科4科の学校紹介
-                    <br><img class="images" src="sakuin/hiratsukanousyou-h.png"></a><br><br>
-                    <a href="maps.html?floor=9F">中央農業高校<br>　園芸科学科・畜産科学科・農業総合科<br>　　農業高校の生産物販売<br>　　（３科）の紹介ビデオを見て特産品をGetしよう<br>　　木材加工や植物の寄せ植え
-                    <br><img class="images" src="sakuin/chuo-ah.png"></a><br><br>
-                    <a href="maps.html?floor=9F">吉田島高校<br>　農業科<br>　　ヨシダジマーケット<br>　　100％天然素材のペン立て
-                    <br><img class="images" src="sakuin/yoshidajima-h.png"></a><br><br>
-                    <a href="maps.html?floor=9F">三浦初声高校<br>　都市農業科<br>　　寄せ植え体験<br>　　生産物販売<br>　　学校の紹介や三浦の農業に関する展示
-                    <br><img class="images" src="sakuin/miurahasse.png"></a><br><br>
-                    <a href="maps.html?floor=9F">二俣川看護福祉高校<br>　看護科<br>　　血圧を測ってみよう。赤ちゃんを抱っこしてみよう。
-                    <br><img class="images" src="sakuin/futamatagawa-w.png"></a><br><br>
-                </p>
-            </div>
-            <div id="10F">
-                <h2>１０階</h2>
-                <p class="imagep">
-                    <a href="maps.html?floor=10F">磯子工業高校<br>　機械科<br>　　磯GOガチャ_機械科<br>　電気科<br>　　磯GOガチャ_電気科<br>　建設科<br>　　磯GOガチャ_建設科<br>　化学科<br>　　磯GOガチャ_化学科<br>　4科合同<br>　　キーフックボードの制作体験
-                    <br><img class="images" src="sakuin/isogo-th_2.png"></a><br><br>
-                    <a href="maps.html?floor=10F">向の岡工業高校<br>　機械科・電気科・建設科<br>　　ドキドキわくわくプログラム体験
-                    <br><img class="images" src="sakuin/mukainooka-th.png"></a><br><br>
-                    <a href="maps.html?floor=10F">川崎工科高校<br>　総合技術科<br>　　勇魚装飾店
-                    <br><img class="images" src="sakuin/kawasakikoka-th.png"></a><br><br>
-                    <a href="maps.html?floor=10F">神奈川工業高等学校<br>　建設科<br>　　模型製作（クリスマスツリー）<br>　デザイン科<br>　　デザインファミリア
-                    <br><img class="images" src="sakuin/kanagawa-th.png"></a><br><br>
-                    <a href="maps.html?floor=10F">小田原城北工業高校<br>　機械科・建設科・電気科・デザイン科<br>　　各科展示
-                    <br><img class="images" src="sakuin/odawarajohoku-th.png"></a><br><br>
-                    <a href="maps.html?floor=10F">川崎総合科学高校<br>　情報工学科・総合電気科・電子機械科・建設工学科・デザイン科・科学科<br>　　川崎市立川崎総合科学高等学校　紹介ブース
-                    <br><img class="images" src="sakuin/kst.png"></a><br><br>
-                    <a href="maps.html?floor=10F">横須賀工業高校<br>　機械科・電気科・建設科・化学科<br>　　横須賀工業全4科から創作物持ってきてみた
-                    <br><img class="images" src="sakuin/yokosuka-th.png"></a><br><br>
-                </p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p><small>&copy; 2024 神工校内マップ 108期生製作 v2.1</small></p>
-        <br><br><br><br><br><br><br>
-    </footer>
 </body>
 </html>
